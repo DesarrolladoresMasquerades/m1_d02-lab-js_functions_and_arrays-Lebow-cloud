@@ -1,3 +1,7 @@
+
+
+
+
 // Iteration #1: Find the maximum
 function maxOfTwoNumbers(a,b) {
   if(a > b){
@@ -98,14 +102,38 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(words) {
+
+  if(words.length === 0) return null;
+
+  let unify = [];
+
+  for(let i = 0; i < words.length; i++){
+    if(unify.indexOf(words[i]) === -1 && words[i] !== ""){
+      unify.push(words[i]);
+    }
+  }
+  return unify;
+}
+
+
 
 
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(arr,word) {
+ 
+if(arr.length === 0) return null;
+
+if (arr.includes(word)){
+  return true
+} else {
+  return false;
+}
+}
+
 
 
 
@@ -124,7 +152,18 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(arr,word) {
+
+  if(arr.length === 0) return null;
+
+  counter = 0;
+
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] === word) counter++
+  }
+
+return counter
+}
 
 
 
